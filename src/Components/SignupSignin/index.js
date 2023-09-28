@@ -133,6 +133,10 @@ function SignupSigninComponent() {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
+
+        // console.log(credential);
+        // console.log(token);
+
         // The signed-in user info.
         const user = result.user;
         console.log(user);
@@ -179,7 +183,7 @@ function SignupSigninComponent() {
             Sign Up on <span style={{color: "var(--theme)"}}>Financely.</span>
           </h2>
           <form>
-            <Input label={"full name"} state={name} setState={setName} placeholder={"John Doe"} ></Input>
+            <Input type="text" label={"full name"} state={name} setState={setName} placeholder={"John Doe"} ></Input>
             <Input type="email" label={"email"} state={email} setState={setEmail} placeholder={"JohnDoe@gmail.com"} ></Input>
             <Input type="password" label={"Password"} state={password} setState={setPassword} placeholder={"Example@123"} ></Input>
             <Input type="password" label={"Confirm Password"} state={confirmPassword} setState={setConfirmPassword} placeholder={"Example@123"} ></Input>

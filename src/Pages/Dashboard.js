@@ -17,7 +17,7 @@ import NoTransactions from '../Components/NoTransactions';
 function Dashboard() {
   const [loading,setLoading] = useState(false);
   const [transactions,setTransactions] = useState([]);
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);        // useAuthState is a custom React hook provided by Firebase. It allows you to subscribe to changes in the user's authentication state. When the user logs in or out, or when their authentication state changes for any reason, this hook provides the updated user object and loading status.
   const [income,setIncome] = useState(0);
   const [expense,setExpenses] = useState(0);
   const [totalBalance,setTotalBalance] = useState(0);
@@ -146,16 +146,21 @@ function Dashboard() {
 
         {/* ------------------------------- */}
 
-        <AddExpenseModal
-          isExpenseModalVisible={isExpenseModalVisible}
-          handleExpenseCancel={handleExpenseCancel}
-          onFinish={onFinish}
-        />
+
+        {/* Add income Dialog box */}
         <AddIncomeModal
           isIncomeModalVisible={isIncomeModalVisible}
           handleIncomeCancel={handleIncomeCancel}
           onFinish={onFinish}
         />
+ 
+        {/* Add expense Dialog box */}
+        <AddExpenseModal
+          isExpenseModalVisible={isExpenseModalVisible}
+          handleExpenseCancel={handleExpenseCancel}
+          onFinish={onFinish}
+        />
+        
         <TransactionTable transactions={transactions} addTransaction={addTransaction} fetchTransactions={fetchTransactions}/>
       </>}
     </div>

@@ -75,9 +75,9 @@ function AddExpenseModal({
             <Select.Option value="food">Food</Select.Option>
             <Select.Option value="education">Education</Select.Option>
             <Select.Option value="office">Office</Select.Option>
-            <Select.Option value="office">Vacation</Select.Option>
-            <Select.Option value="office">Entertainment & Miscellaneous</Select.Option>
-            <Select.Option value="office">Rent </Select.Option>
+            <Select.Option value="vacation">Vacation</Select.Option>
+            <Select.Option value="entertainment & miscellaneous">Entertainment & Miscellaneous</Select.Option>
+            <Select.Option value="rent">Rent</Select.Option>
             
 
            

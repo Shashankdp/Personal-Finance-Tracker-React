@@ -12,7 +12,7 @@ const App = () => {
 
     return(
         <>
-            <ToastContainer />
+            <ToastContainer />   {/*This is where the toasts will be rendered */}
             <Router>
                 <Routes>
                     <Route path="/" element={<Signup></Signup>}></Route>

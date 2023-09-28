@@ -43,11 +43,13 @@ function ChartsComponent({ sortedTransactions }) {
 
     let chart;
     let pieChart;
+
   return (
     <div className='charts-wrapper'>
       <div>
         <h2>Financial Statistics</h2>
-        <Line {...config} onReady={(chartInstance) => (chart = chartInstance)} />
+        <Line {...config} onReady={(chartInstance) => (chart = chartInstance)} />   {/* <Line> Component: This is the component responsible for rendering a line chart. It is typically part of a charting library and allows you to create line charts with various configurations and data. */}
+
       </div>
       <div>
         <h2>Total Spendings</h2>

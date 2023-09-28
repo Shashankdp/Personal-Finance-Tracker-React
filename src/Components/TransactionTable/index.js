@@ -10,6 +10,9 @@ function TransactionTable({ transactions, addTransaction, fetchTransactions }) {
     const { Option } = Select;
     const [search,setSearch] = useState("");
     const [typeFilter,setTypeFilter] = useState("");
+
+    // console.log(transactions);
+
     const columns = [
         {
           title: "Name",
@@ -38,8 +41,14 @@ function TransactionTable({ transactions, addTransaction, fetchTransactions }) {
         },
       ];
 
-      let filteredTransactions = transactions.filter((item)=>
-          item.name.toLowerCase().includes(search.toLowerCase()) && item.type.includes(typeFilter)
+      // let filteredTransactions = transactions.filter((item)=>
+      //     item.name.toLowerCase().includes(search.toLowerCase()) && item.type.includes(typeFilter)
+      // );
+
+      //OR
+
+      let filteredTransactions = transactions.filter((item) =>
+         item.name.toLowerCase().includes(search.toLowerCase()) && item.type && item.type.includes(typeFilter)
       );
 
       const sortedTransactions = filteredTransactions.sort((a, b) => {
@@ -149,6 +158,7 @@ function TransactionTable({ transactions, addTransaction, fetchTransactions }) {
             <Radio.Button value="date">Sort by Date</Radio.Button>
             <Radio.Button value="amount">Sort by Amount</Radio.Button>
           </Radio.Group>
+
           <div
             style={{
               display: "flex",
