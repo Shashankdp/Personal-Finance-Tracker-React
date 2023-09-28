@@ -8,6 +8,6 @@ Developed a web-based personal finance tracker application using React.js, Fireb
 
 ## Technologies Used:
 React.js,
-Firebase (Authentication, Realtime Database, Storage)
+Firebase (Authentication, Realtime Database, Storage),
 Ant Design (UI Framework),
 HTML, CSS
